@@ -35,7 +35,6 @@
 1.3 Вариант репликации master-slave.
 1.3.* 
 
-
 ---
 
 ### Задание 2. PostgreSQL
@@ -51,12 +50,12 @@
     Команда pg_dump — выгрузить базу данных PostgreSQL в виде скрипта или в архивном формате. После воспользовавшись командой `pg_restore`  восстанавливаем выбранную базу данных
     PostgreSQL. Для указания базы данных нужно задать параметр `-d` - `pg_restore <имя_базы> <файл_сохранения>`.
 
-[Нашел здесь](https://postgrespro.ru/docs/postgresql/11/app-pgdump)
+[Смотрел здесь](https://postgrespro.ru/docs/postgresql/11/app-pgdump)
 
 2.1.* При использовании pg_dump для регулярного резервного копирования каждой базы данных, необходимо создавать отдельные задачи в cron на основе скриптов.
       Восстановление же лучше делать вручную по необхлодимости (повреждение, сбой и т.п.), но возможено создание отдельных задачь в cron с помощью скриптов.
 
-[Нашел здесь](https://selectel.ru/blog/postgresql-backup-tools/)
+[Смотрел здесь](https://selectel.ru/blog/postgresql-backup-tools/)
 
 ---
 
@@ -71,12 +70,12 @@
 
 3.1. Для данного вида резеревирования используется команда `mysqlbackup` с параметром `--incremental-base=history:last_full_backup`.
 
-[Нашел здесь](https://www.rldp.ru/mysql/meb80/backup.htm)
+[Смотрел здесь](https://www.rldp.ru/mysql/meb80/backup.htm)
 
 Есть сторонние утилиты, например, Percona XtraBackup, которая позволяет делать архивы баз данных на лету без блокировок таблиц.
 Вот команда: `xtrabackup --backup --target-dir=/backupdb/inc1 --incremental-basedir=/backupdb/full`.
 
-[Нашел здесь](https://serveradmin.ru/polnyj-i-inkrementnyj-backup-mysql/)
+[Смотрел здесь](https://serveradmin.ru/polnyj-i-inkrementnyj-backup-mysql/)
 
 3.1.* Нужно соблюсти следущие параметры для развертывания и эксплуатации информационной системы: 
       - отказоустойчивость — если основной сервер выходит из строя, резервная копия (реплика) берёт на себя его функции.
@@ -84,6 +83,6 @@
       - резервное копирование в реальном времени — в отличие от классического бэкапа, репликация поддерживает копии постоянно актуальными.
       - снижение задержек доступа — реплики могут быть географически ближе к пользователям.
 
-[Нашел здесь](https://glabit.ru/blog/replikaciya-baz-dannyh)
+[Смотрел здесь](https://glabit.ru/blog/replikaciya-baz-dannyh)
 
 ---
